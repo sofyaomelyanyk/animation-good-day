@@ -15,6 +15,7 @@ VANTA.BIRDS({
 const openModal = document.querySelector("a[data-open]");
 const closeModal = document.querySelector("button[data-close]");
 const modal = document.querySelector("[data-modal]");
+const button = document.querySelector("[data-button]");
 
 console.log(openModal);
 
@@ -23,10 +24,12 @@ closeModal.addEventListener("click", onCloseModal);
 
 function onOpenModal() {
   modal.classList.remove("backdrop-hidden");
+  button.classList.toggle("backdrop-hidden");
   console.log("HIIIII");
 }
 
 function onCloseModal() {
   modal.classList.add("backdrop-hidden");
+  button.classList.toggle("backdrop-hidden");
   console.log("BYEEE");
 }
