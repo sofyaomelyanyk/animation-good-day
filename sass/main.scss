@@ -9,6 +9,7 @@ body {
   background: #ccc;
   padding: 0;
   margin: 0;
+  overflow: hidden;
 }
 
 body {
@@ -57,7 +58,7 @@ body {
 
 .btn-white {
   background-color: #fff;
-  color:  rgba(0, 0, 0, 0.8);
+  color: rgba(0, 0, 0, 0.8);
 }
 
 .btn::after {
