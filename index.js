@@ -38,15 +38,13 @@ function onOpenModal() {
   } else if (hours >= 12 && hours <= 21) {
     modalTitle.textContent = "Я радий тебе бачити! Заходь частіше!";
   } else if (hours >= 22 && hours <= 1) {
-    modalTitle.textContent = "Здається вже запізно,  час лягати! Добраніч!";
+    modalTitle.textContent = "Здається вже запізно, час лягати! Добраніч!";
   } else {
     modalTitle.textContent = "Ти чого тут ходиш? Бачив яка зараз година!?";
   }
- 
 }
 
 function onCloseModal() {
   modal.classList.add("backdrop-hidden");
   button.classList.toggle("backdrop-hidden");
-  
 }
