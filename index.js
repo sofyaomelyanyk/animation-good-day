@@ -39,7 +39,7 @@ function onOpenModal() {
     modalTitle.textContent = "Я радий тебе бачити! Заходь частіше!";
   } else if (hours >= 22 && hours <= 1) {
     modalTitle.textContent = "Здається вже запізно, час лягати! Добраніч!";
-  } else {
+  } else if (hours >= 2 && hours <= 5) {
     modalTitle.textContent = "Ти чого тут ходиш? Бачив яка зараз година!?";
   }
 }
