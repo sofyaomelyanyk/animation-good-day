@@ -1,0 +1,176 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: #ccc;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  position: absolute;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.text-box {
+  font-size: 40px;
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  @media screen and (min-width: 768px) {
+    font-size: 30px;
+  }
+}
+
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 25px 30px;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all 0.2s;
+  position: absolute;
+
+  @media screen and (min-width: 768px) {
+    padding: 15px 40px;
+  }
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #777;
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.btn-white::after {
+  background-color: #fff;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn-animated {
+  animation: moveInBottom 5s ease-out;
+  animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: scroll;
+  padding: 60px 15px;
+}
+
+.modal__content {
+  width: 100%;
+  max-width: 500px;
+  padding: 50px;
+  background: #90c2eeea;
+  border-radius: 15px;
+  position: relative;
+  box-shadow: 0 5px 15px black;
+}
+
+.modal__close-button {
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: none;
+  cursor: pointer;
+  transition: 0.3s;
+  outline: none;
+}
+
+.modal__close-button:hover {
+  transition: 0.3s;
+  transform: rotate(180deg);
+}
+
+.modal__title {
+  font-size: 30px;
+  text-align: center;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  margin: 0 0 15px;
+  color: rgba(18, 17, 17, 0.8);
+
+  @media screen and (min-width: 768px) {
+    font-size: 40px;
+  }
+}
+
+.backdrop-hidden {
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.image {
+  height: 250px;
+  position: relative;
+
+  @media screen and (min-width: 768px) {
+    height: 400px;
+    right: 40px;
+    position: relative;
+  }
+}
