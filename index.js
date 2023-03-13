@@ -37,10 +37,10 @@ function onOpenModal() {
     modalTitle.textContent = "Добрий ранок! Гарного тобі дня!";
   } else if (hours >= 12 && hours <= 21) {
     modalTitle.textContent = "Я радий тебе бачити! Заходь частіше!";
-  } else if (hours >= 22 && hours <= 1) {
-    modalTitle.textContent = "Здається вже запізно, час лягати! Добраніч!";
   } else if (hours >= 2 && hours <= 5) {
     modalTitle.textContent = "Ти чого тут ходиш? Бачив яка зараз година!?";
+  } else {
+    modalTitle.textContent = "Здається вже запізно, час лягати! Добраніч!";
   }
 }
 
